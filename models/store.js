@@ -17,6 +17,18 @@ const StoreSchema = new Schema({
     type: String,
     required: true,
   },
+  price: {
+    type: String,
+    default: "FREE",
+  },
+  isUnpublish: {
+    type: Boolean,
+    default: false,
+  },
+  isDuplicate: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 module.exports = mongoose.model("store", StoreSchema);
